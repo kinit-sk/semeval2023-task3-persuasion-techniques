@@ -5,7 +5,7 @@ This repository contains supplementary material for the paper *KInITVeraAI at Se
 ### Citing the Paper:
 If you make use of any data or modules in this repository, please cite the following paper:
 
-*Hromadka, T., Smolen, T., Remis, T., Pecher, B., & Srba, I. (2023). Team KInITVeraAI at SemEval-2023 Task 3: Simple yet Powerful Multilingual Fine-Tuning for Persuasion Techniques Detection. In Proceedings of the 17th International Workshop on Semantic Evaluation.*
+*Hromadka, T., Smolen, T., Remis, T., Pecher, B., & Srba, I. (2023). KInITVeraAI at SemEval-2023 Task 3: Simple yet Powerful Multilingual Fine-Tuning for Persuasion Techniques Detection. In Proceedings of the 17th International Workshop on Semantic Evaluation.*
 
 ## Abstract
 
