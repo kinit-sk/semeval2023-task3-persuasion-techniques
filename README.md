@@ -17,9 +17,11 @@ This repository is structured in three folders:
 
 1. [Input data](_input_data) – raw data and tools provided by task organizer
 2. [Processed data](_processed_data) - processed data in csv format
-3. [Preprocessing](preprocessing) - python files to process data into csv format
-4. [Analysis of results](results_analysis) - data of our results and notebook with their analysis
-5. [Training and evaluation](training_evaluation) - python files for training and evaluation of models
+3. [Exploratory Data Analysis](eda) - notebook with exploratory data analysis of the dataset
+4. [Preprocessing](preprocessing) - python files to process data into csv format
+5. [Results](results) - folder where your results will be saved
+6. [Analysis of results](results_analysis) - data of our results and notebook with their analysis
+7. [Training and evaluation](training_evaluation) - python files for training and evaluation of models
 
 ## Data
 
@@ -32,3 +34,7 @@ To run the training and evaluation of the model, you need to run [run_persuasion
 In case you want to get ensembled results, you can use the [run_ensemble.py](run_ensemble.py) and set the arguments accordingly. The calculated metrics will be saved in the same location. The riles with results which ensemble method uses are expected to be in the results folder, to which the evaluation method should save them by default.
 
 To analyse the results you can use the [create_results.ipynb](create_results.ipynb) notebook, which leverages the tables with calculated results during evaluation.
+
+## Results Replication
+
+For replication of Figures 2 and 4 from the paper, please see the plots as well as their code in [create_results.ipynb](create_results.ipynb). To replicate table 1, first obtain results for each language in submission format. Afterwards you will need to concatenate all of these files together (manually or using code) to form a single file containing results for all of the languages. These results are then to be fed to scorer_subtask_3.py, which is provided by the task organizers.

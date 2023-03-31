@@ -2,6 +2,7 @@
 import torch
 import transformers
 
+
 class BERTBase(torch.nn.Module):
     def __init__(self):
         super(BERTBase, self).__init__()

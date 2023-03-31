@@ -119,7 +119,7 @@ def load_dataframe(args):
 
     language_to_texts = {lan: list(text) for lan, text in test_df.groupby('language')['text']}
     for language, texts in language_to_texts.items():
-        print(f'language {language} has {len(texts)} lines of _input_data.')
+        print(f'language {language} has {len(texts)} lines of data.')
 
     if not args['ONLY_TEST']:
         print('Encoding techniques into one-hot-encoded lists!\n')
@@ -148,7 +148,7 @@ def load_dataframe(args):
 
 def create_dataloader(args, test_df, language, language_counts):
     print(
-        f'testing on {language_counts[language]} _input_data points (around {language_counts[language] / args["BATCH_SIZE"]} iterations)')
+        f'testing on {language_counts[language]} data points (around {language_counts[language] / args["BATCH_SIZE"]} iterations)')
     filtered_test_df = test_df.copy()
     filtered_test_df = filtered_test_df[filtered_test_df['language'] == language]
     filtered_test_df = filtered_test_df.reset_index()

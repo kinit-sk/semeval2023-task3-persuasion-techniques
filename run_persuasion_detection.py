@@ -10,7 +10,7 @@ args_train = {
     'LEARNING_RATE': 1e-05,
     'MODEL_NAME': 'xlm-roberta-base', # model name as per hugging face library, currently supported model names are: roberta-large, roberta-base, bert-base-uncased, bert-base-multilingual-cased, xlm-roberta-base and xlm-roberta-large
     'DROPOUT_RATE': 0.3,
-    'MODELS_DIR': '/content/drive/MyDrive/KINIT - semeval/models/',
+    'MODELS_DIR': '', # path to your folder with models
     'PATHS_TO_TRAIN': [], # useful when training on more sets (e.g. train and dev), list of paths to the csv files
     'PATHS_TO_VALIDATION': [], # leave empty if no validation required
 
@@ -35,11 +35,11 @@ model_file = run_training(args_train)
 
 
 args_eval = {
-    'MODEL_FILE_NAME': '',
+    'MODEL_FILE_NAME': model_file,
     # path to saved model
 
     'RESULT_DIR_NAME': '',
-    # name of directory where to store the txt result files (for submission) # e.g. 'distilbert_base_threshold_0_4'
+    # name of subdirectory within 'results' where to store the txt result files (for submission) # e.g. 'distilbert_base_threshold_0_4'
 
     'EVALUATION_THRESHOLD': 0.5,
     # select the confidence threshold for when to assign a label. Default is 0.5

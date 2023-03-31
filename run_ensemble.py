@@ -99,4 +99,4 @@ for dir1, dir2 in zip(args['RESULTS_DIR_1'], args['RESULTS_DIR_2']):
 
         print(f'Recording results to < results_table/{result_dir_name}.csv >')
         results_df = pd.DataFrame(results_list, columns=[['language', 'accuracy', 'F1_micro', 'F1_macro']])
-        results_df.to_csv(f'results_analysis/results_table/{result_dir_name}.csv', sep='\t', header=True, index=False)
+        results_df.to_csv(f'results_analysis/results_table/ensemble/{result_dir_name}.csv', sep='\t', header=True, index=False)
