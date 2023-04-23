@@ -55,7 +55,6 @@ class LanguageModel:
         elif args['MODEL_NAME'] == 'xlm-roberta-large':
             self.model = XLMRobertaLarge()
 
-        self.model = EnglishRobertaBase()
         self.model.to(self.device)
         self.optimizer = torch.optim.Adam(params=self.model.parameters(), lr=self.args['LEARNING_RATE'])
         if args['FREEZE']:
@@ -152,6 +151,6 @@ class LanguageModel:
                 break  # the last epoch was NOT counted due to early stopping
             else:
                 # store latest version
-                path = self.save_model_and_weights(self.model)
+                path = self.save_model_and_weights(epoch)
         print("Done.")
         return path

@@ -82,5 +82,5 @@ def run_eval(args):
             create_submission_txt(outputs, filtered_test_df, path, mappings)
 
     df_results = pd.DataFrame(results_list, columns=['language', 'accuracy', 'F1_micro', 'F1_macro'])
-    df_results.to_csv(f'../results_analysis/results_table/{args["RESULTS_DIR_NAME"]}.csv', sep='\t', header=True, index=False)
+    df_results.to_csv(f'../results_analysis/results_table/{args["RESULT_DIR_NAME"]}.csv', sep='\t', header=True, index=False)
     print('Done!')
