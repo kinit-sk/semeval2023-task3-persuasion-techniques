@@ -1,0 +1,7 @@
+advertools
+google-cloud-translate
+pytorch
+numpy
+pandas
+scikit-learn
+transformers

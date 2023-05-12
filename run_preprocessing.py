@@ -13,14 +13,16 @@ the argparser.
 #args = parser.parse_args()
 #sentence_id_to_sentence, article_id_to_sentences = init_data(args)
 
-#Choose a file name
-FILE_NAME = "train_set.csv"
+for name in ('train_set', 'dev_set', 'test_set'):
 
-# Set which data to pull
-sentence_id_to_sentence, article_id_to_sentences = init_raw_data(train_set=True, dev_set=False, test_set=False)
+    #Choose a file name
+    FILE_NAME = f"{name}.csv"
+
+    # Set which data to pull
+    sentence_id_to_sentence, article_id_to_sentences = init_raw_data(train_set=name == 'train_set', dev_set=name == 'dev_set', test_set=name == 'test_set')
 
 
-df = pd.DataFrame(data=sentence_id_to_sentence.values())
+    df = pd.DataFrame(data=sentence_id_to_sentence.values())
 
-# name file as desired
-df.to_csv(f"./_processed_data/{FILE_NAME}", index=False)
+    # name file as desired
+    df.to_csv(f"./_processed_data/{FILE_NAME}", index=False)

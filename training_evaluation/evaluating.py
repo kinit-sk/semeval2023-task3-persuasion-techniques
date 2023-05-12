@@ -45,7 +45,7 @@ def run_tests(model, testing_loader, evaluation_threshold, only_test, lang, resu
         results_list.append([lang, accuracy, f1_score_micro, f1_score_macro])
         print(results_list)
 
-    return outputs
+    return outputs, results_list
 
 
 def create_submission_txt(outputs, df, path, mappings):
@@ -78,9 +78,9 @@ def run_eval(args):
 
             outputs, results_list = run_tests(model, testing_loader, args['EVALUATION_THRESHOLD'], args['ONLY_TEST'], language, results_list)
 
-            path = f'../results/{args["RESULT_DIR_NAME"]}/{language}.txt'
+            path = f'results/{args["RESULT_DIR_NAME"]}/{language}.txt'
             create_submission_txt(outputs, filtered_test_df, path, mappings)
 
     df_results = pd.DataFrame(results_list, columns=['language', 'accuracy', 'F1_micro', 'F1_macro'])
-    df_results.to_csv(f'../results_analysis/results_table/{args["RESULT_DIR_NAME"]}.csv', sep='\t', header=True, index=False)
+    df_results.to_csv(f'results_analysis/results_table/{args["RESULT_DIR_NAME"]}.csv', sep='\t', header=True, index=False)
     print('Done!')

@@ -36,25 +36,9 @@ parser.add_argument(
     help='handle for sentence_transformers model to be used for fine-tuning. Also name of model to be used for labelling.'
 )
 
-parser.add_argument(
-    '--wandb-run-name',
-    type=str,
-    default=datetime.now().strftime('%Y-%m-%d_%H-%M-%S'),
-    help='name for wandb run defaults to timestamp',
-)
 
-parser.add_argument(
-    '--wandb-project',
-    type=str,
-    help='name for wandb project where the results will be logged',
-)
 
-parser.add_argument(
-    '--wandb-offline',
-    type=str,
-    default='online',
-    help='Select offline if you wish to run locally. Leave blank, or select "online"',
-)
+
 
 # Text preprocessing args
 

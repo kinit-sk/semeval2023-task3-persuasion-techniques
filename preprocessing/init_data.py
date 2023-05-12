@@ -20,8 +20,8 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger('init_data')
 
 
-def init_raw_data(train_set=True, dev_set=True, test_set=False) -> Tuple[Dict[int, Line], Dict[int, Article]]:
-    path = '../_input_data/data'
+def init_raw_data(train_set=True, dev_set=True, test_set=True) -> Tuple[Dict[int, Line], Dict[int, Article]]:
+    path = '_input_data/data'
     sentences = []
     labels = []
     logger.info("Loading _input_data...")
